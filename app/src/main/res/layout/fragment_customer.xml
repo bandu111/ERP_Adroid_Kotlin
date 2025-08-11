@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 主体内容：你原来的 LinearLayout 放进来 -->
+    <LinearLayout
+        android:id="@+id/content_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
+
+        <TextView
+            android:layout_margin="8dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            android:text="客户管理"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <SearchView
+            android:id="@+id/starchBar"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_searchview"
+            android:iconifiedByDefault="false"
+            android:queryHint="搜索客户名称..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:padding="3dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/quanbu"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@drawable/is_background_contina"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:text="全部"
+                android:layout_width="0dp"
+                android:layout_height="27dp"/>
+
+            <TextView
+                android:id="@+id/qianzai"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@drawable/backgrount_contina"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:text="潜在客户"
+                android:layout_width="0dp"
+                android:layout_height="27dp"/>
+
+            <TextView
+                android:id="@+id/genjing"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@drawable/backgrount_contina"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:text="跟进中"
+                android:layout_width="0dp"
+                android:layout_height="27dp"/>
+
+            <TextView
+                android:id="@+id/hezuo"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@drawable/backgrount_contina"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:text="合作中"
+                android:layout_width="0dp"
+                android:layout_height="27dp"/>
+
+            <TextView
+                android:id="@+id/qianyue"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@drawable/backgrount_contina"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:text="已签约"
+                android:layout_width="0dp"
+                android:layout_height="27dp"/>
+        </LinearLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pageview2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <!-- 悬浮按钮（右下角） -->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

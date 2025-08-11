@@ -1,0 +1,292 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToOutline="true"
+    android:layout_margin="5dp"
+    android:background="@drawable/bottom_sheet_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 其他内容 -->
+        <Space android:layout_width="match_parent" android:layout_height="15dp" />
+        <TextView
+            android:layout_margin="8dp"
+            android:text="新增产品"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Space android:layout_width="match_parent" android:layout_height="15dp" />
+
+        <!-- 产品名称输入框 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:padding="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入产品名称"
+            app:boxStrokeColor="@android:color/black"
+            app:hintTextColor="@android:color/black"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputName"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 产品编号输入框 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:padding="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入产品编号"
+            app:boxStrokeColor="@android:color/black"
+            app:hintTextColor="@android:color/black"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputcode"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 库存数量输入框 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:padding="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="请输入库存数量"
+            app:boxStrokeColor="@android:color/black"
+            app:hintTextColor="@android:color/black"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputsize"
+                android:inputType="phone"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 邮箱输入框 -->
+
+        <Space android:layout_width="match_parent" android:layout_height="10dp"></Space>
+
+        <!-- 单位 -->
+        <TextView
+            android:layout_margin="8dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="单位"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Space android:layout_width="match_parent" android:layout_height="10dp"></Space>
+
+        <!-- 产品标签 -->
+        <com.google.android.material.chip.ChipGroup
+            android:layout_gravity="center"
+            android:id="@+id/chipGroup"
+            android:layout_margin="10dp"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:chipSpacingHorizontal="8dp"
+            app:chipSpacingVertical="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- 第一行 -->
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/chip1"
+                    android:text="台"
+                    app:ensureMinTouchTargetSize="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:chipMinHeight="40dp"
+                    app:checkedIconVisible="false" />
+
+                <com.google.android.material.chip.Chip
+                    android:gravity="center"
+                    app:ensureMinTouchTargetSize="true"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/chip2"
+                    android:text="张"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:checkedIconVisible="false"
+                    app:chipMinHeight="40dp" />
+
+                <com.google.android.material.chip.Chip
+                    app:ensureMinTouchTargetSize="true"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/chip3"
+                    android:text="包"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:checkedIconVisible="false"
+                    app:chipMinHeight="40dp" />
+
+                <com.google.android.material.chip.Chip
+                    app:ensureMinTouchTargetSize="true"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/chip4"
+                    android:text="块"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:checkedIconVisible="false"
+                    app:chipMinHeight="40dp" />
+
+            <!-- 第二行 -->
+
+
+                <com.google.android.material.chip.Chip
+
+                    app:ensureMinTouchTargetSize="true"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/chip5"
+                    android:text="个"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:checkedIconVisible="false"
+                    app:chipMinHeight="40dp" />
+
+                <com.google.android.material.chip.Chip
+                    app:ensureMinTouchTargetSize="true"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/chip6"
+                    android:text="套"
+                    app:chipMinHeight="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:checkedIconVisible="false" />
+
+                <com.google.android.material.chip.Chip
+                    app:chipMinHeight="40dp"
+                    app:ensureMinTouchTargetSize="true"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:id="@+id/chip7"
+                    android:text="箱"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:checkedIconVisible="false" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+
+        <!-- 产品分类 -->
+        <TextView
+            android:layout_margin="8dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="产品分类"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Space android:layout_width="match_parent" android:layout_height="10dp"></Space>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/group2_"
+            android:layout_margin="8dp"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:singleLine="false"
+            app:chipSpacingHorizontal="8dp"
+            app:chipSpacingVertical="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPotential_1"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电子设备"
+                app:checkedIconVisible="false"
+                app:ensureMinTouchTargetSize="true"
+                app:chipMinHeight="40dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFollowing_1"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="办公家具"
+                android:layout_weight="1"
+                app:checkedIconVisible="false"
+                app:ensureMinTouchTargetSize="true"
+                app:chipMinHeight="40dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipCooperate_1"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="办公用品"
+                android:layout_weight="1"
+                app:checkedIconVisible="false"
+                app:ensureMinTouchTargetSize="true"
+                app:chipMinHeight="40dp"/>
+        </com.google.android.material.chip.ChipGroup>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Cancel"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="取消"
+                android:layout_marginEnd="8dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Confirm"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="确认添加"/>
+        </LinearLayout>
+
+        <Space android:layout_width="match_parent" android:layout_height="30dp"></Space>
+    </LinearLayout>
+
+</ScrollView>

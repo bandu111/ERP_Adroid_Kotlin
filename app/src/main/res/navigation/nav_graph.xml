@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/nav_customer">
+    <fragment
+        android:id="@+id/nav_customer"
+        android:name="com.example.erp.Fragments.CustomerFragment"
+        android:label="客户" />
+
+    <fragment
+        android:id="@+id/nav_inventory"
+        android:name="com.example.erp.Fragments.InventoryFragment"
+        android:label="库存" />
+
+    <fragment
+        android:id="@+id/nav_orders"
+        android:name="com.example.erp.Fragments.OrdersFragment"
+        android:label="人事" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.erp.Fragments.ProfileFragment"
+        android:label="我的" />
+</navigation>

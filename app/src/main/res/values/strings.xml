@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ERP</string>
+    <string-array name="contries">
+        <item>全部</item>
+        <item>销售部</item>
+        <item>财务部</item>
+        <item>技术部</item>
+        <item>人事部</item>
+        <item>市场部</item>
+        <item>客服部</item>
+    </string-array>
+    <string-array name="contries2">
+        <item>全部</item>
+        <item>在职</item>
+        <item>离职</item>
+    </string-array>
+</resources>

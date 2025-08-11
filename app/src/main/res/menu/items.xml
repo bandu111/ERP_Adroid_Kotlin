@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_customer"
+        android:icon="@drawable/kehu"
+        android:title="客户" />
+    <item
+        android:id="@+id/nav_inventory"
+        android:icon="@drawable/kucun"
+        android:title="库存" />
+    <item
+        android:id="@+id/nav_orders"
+        android:icon="@drawable/xiaoshou"
+        android:title="人事" />
+<!--    <item-->
+<!--        android:id="@+id/nav_profile"-->
+<!--        android:icon="@drawable/wodeactive"-->
+<!--        android:title="我的" />-->
+</menu>

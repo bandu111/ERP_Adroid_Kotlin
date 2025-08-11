@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="库存分析"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <!-- 统计卡片：总库存 / 低库存 / 品类数 -->
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:gravity="center"
+            android:paddingBottom="8dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                android:elevation="5dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="18dp">
+
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTotalStock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="197"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总库存"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:elevation="5dp"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="18dp">
+
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvLowStock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="低库存"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:elevation="5dp"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="18dp">
+
+                <LinearLayout
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCategoryCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="品类数"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- 库存趋势（LineChart） -->
+        <com.google.android.material.card.MaterialCardView
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="18dp"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+               android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="库存趋势"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:paddingBottom="8dp" />
+
+                <com.db.williamchart.view.LineChartView
+                    android:id="@+id/chartliner"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_margin="0dp"
+                    android:padding="5dp"
+                    android:paddingRight="8dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    app:chart_labelsSize="15sp" />
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 分类占比（DonutChart + 右侧图例） -->
+        <com.google.android.material.card.MaterialCardView
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="18dp"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分类占比"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:paddingBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <com.db.williamchart.view.DonutChartView
+                        android:layout_margin="5dp"
+                        android:id="@+id/donchart"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_marginEnd="0dp" />
+
+                    <!-- 简洁文字图例（用 • 作为色点，颜色由代码设置 textColor） -->
+                    <LinearLayout
+                        android:padding="8dp"
+                        android:layout_margin="8dp"
+                        android:id="@+id/containers"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/legend1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="• 电子设备  48"
+                            android:textSize="13sp"
+                            android:paddingTop="4dp" />
+
+                        <TextView
+                            android:id="@+id/legend2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="• 办公家居  135"
+                            android:textSize="13sp"
+                            android:paddingTop="4dp" />
+
+                        <TextView
+                            android:id="@+id/legend3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="• 办公耗材  14"
+                            android:textSize="13sp"
+                            android:paddingTop="4dp" />
+
+                        <TextView
+                            android:id="@+id/legend4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="• 其他  6"
+                            android:textSize="13sp"
+                            android:paddingTop="4dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

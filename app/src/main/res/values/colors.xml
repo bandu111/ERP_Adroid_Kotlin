@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="erp_blue">#2A66FF</color>
+    <color name="erp_grey">#9AA3AF</color>
+    <color name="erp_bg">#F5F7FB</color>
+    <color name="bnv_bg">#FFFFFFFF</color>
+</resources>

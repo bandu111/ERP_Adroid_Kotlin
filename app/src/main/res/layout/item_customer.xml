@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:text="客户名称"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvSub"
+            android:text="联系人 · 138****0000"
+            android:textColor="#6B7280"
+            android:textSize="13sp"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="最近跟进：2025-08-07"
+            android:textColor="#9AA3AF"
+            android:textSize="12sp" />
+    </LinearLayout>
+<TextView
+    android:id="@+id/btnEdit"
+    android:layout_margin="25dp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:textSize="25dp"
+    android:layout_gravity="center"
+    android:text="..."
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"></TextView>
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+</LinearLayout>
